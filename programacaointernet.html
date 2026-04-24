@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title> Capítulo II </title>
+	</head>
+	<body> 
+		<h1> Estruturando páginas com HTML </h1>
+		<p><i> Juntamente com a linguagem de estilo Cascading Style Sheets (CSS) e a linguagem de programação JavaScript, a Hypertext Markup Language (HTML)
+é uma das três principais linguagens importantes para o desenvolvimento frontend. </i></p>
+
+<h2><b> Versões HTML</b> </h2>
+<p> HTML: a primeira versão do html foi publicada em 1992 e foi proposta por <u>Tim Berners-Lee</u>.
+<p> HTML 4.0: 1997 e foi muito importante para o CSS.
+<p> XHTML 1.0: reformulação do HTMl, segundo as regras do XMl.
+<p> HTML5: Lançada em 2014 e substitui as versões antigas de HTML e XML. 
+</p>
+<h2> Uso de elementos e atributos </h2>
+<p> Como já mencionado o HTML é uma linguagem de marcação que serve para <i>estuturar</i> páginas web, bem como sua semântica. Cada elemento vai consistir em uma <i>abertura de tag e fechamento de tag</i>. Por exemplo, as tags "h1 e /h1" intruduzem o titulo inicial, dando destaque ao seu tamanho e indicandio assim que é um título principal. 
+<p>
+<img src = "C:\Users\avill\Downloads\simpleestructhtml.jpeg" alt = "Estrutura do HTML simples" title = "Estrutura básica do html." />
+<p> 	Quando utilizamos o <i>Doctype</i> estamos especificando a versão do html que iremos utilizar.
+<p> Quando abrimos os &lt;HTML&gt; estamos introduzindo a página web, além disso as informações inseridas dentro dessa tag são aquelas que não serão exibidas no "corpo" do nosso site. 
+<p> Já quando fazemos uso de &lt;BODY&gt; etsmos falando que tudo que está sendo inserido ali deve aparecer no browser para ser visto, já que ali é o "corpo" do site. 
+<p> E quando falamos de texto podemos utilizar as tags que indicam titulos, subtitulos, seus tamanhos, etc. São as tags &lt;h1&gt; essa tag indica os títulos principais da página e pode se  ramificar em mais cinco tags indicando textos menores, ou seja, vai até o h6, sendo “h” a abreviação de “heading” (título).
+<h2> Parametrização de elementos via atributos</h2>
+<p>  Os atributos são colocados na tag de abertura  de um elemento e consistem em um nome e um valor que fica entre aspas duplas, separados por um sinal de igualadade. Exemplo, para definir um link utilizamos a tag &lt;a&gt; que é uma ancora e usamos o atributo &lt;href&gt; para definir a URL da página vinculada. 
+<p>Exemplo: 
+<a href = "https://suap.ifpi.edu.br/media/edu/material_aula/capitulo_2-363bba67a5544db1a627f893a04f3e75.pdf" > LINK DO ARTIGO BASE PARA ESTE RESUMO </a>
+<p><img src = "C:\Users\avill\Downloads\figura22html.jpeg" alt = "Segunda imagem" title = "Imagem relacionada a estrutura de linkagens utilizando HTML"/>
+</p>
+<h2> Uso dos titulos, paragrafos e outras formatações de etexto. </h2>
+<p> Como já mencionado, o HTMl possui seis tipos de <i>headings</i>. Cada uma delas vai corresponder a seis diferentes elementos, sendo a primeira para o primeiro nível e maior e o ultimo, para o menor. Para definir paragrafos usamos a tag &lt;p&gt; Os parágrafos são exibidos pelo navegador com um espaço entre eles e outros parágrafos. &lt;i&gt; e &lt;b&gt;: o primeiro deixa o texto em itálico (“italic”), e o segundo em negrito (“bold”). Você também pode usar os elementos &lt;em&gt; e &lt;strong&gt; para destacar textos importantes. Por padrão, textos com &lt;em&gt; aparecem em itálico, e textos com &lt;strong&gt; aparecem em negrito. Alguns elementos podem também ser úteis como, por exemplo, &lt;blockquote&gt; que serve para citações maiores. 
+</p>
+<h2> Criação de listas </h2>
+<p> Existem três tipos de listas diferentes em HTML: as listas ordenadas (enumeradas), as listas não ordenadas (não enumerdadas) e listas de definição (efinição de termos).
+<ol>
+<li>First entry</li>
+<li>Second entry</li>
+<li>Third entry</li>
+<li>Fourth entry</li>
+<li>Fifth entry</li>
+</ol>
+
+<img src = "C:\Users\avill\Downloads\figu3.jpeg" alt = "Figura sobre listas" title = "Listas ordenadas e sua esrutura" />
+<br>
+Para listas não ordenadas usa-se &lt;ul&gt; que basicamente significa "<i>unordered list</i>"
+<ul>
+<li>Programação Internet</li>
+<li>Banco de dados</li>
+<li>Projeto extensionista</li>
+<li>Inteligencia Artificial</li>
+<li>Rede e Arquitetura de computadores</li>
+</ul>
+<img src = "C:\Users\avill\Downloads\figu4.jpeg" alt = "Listas não ordenadas" title = "listas não ordenadas" />
+<br> <p>
+O trecho destacado na imgem (o comando) serve para adionar o elemento a lista, sem necessariamente adicionar um número. Existem também outros tipos de listas que vão indicar definiçõese e listas aninhadas. 
+<br>
+<img src = "C:\Users\avill\Downloads\figu5.jpeg" alt = "tipo de lista" title = "tipo de lista" /> <img src = "C:\Users\avill\Downloads\figu6.jpeg" alt = "outro tipo de lista" title = "Lista" />
+</p>
+<h2>Links</h2>
+<p>
+Links são criados com a tag &lt;a&gt; e o atributo href.
+Podem ser externos, relativos ou internos.<br>
+O texto do link deve ser claro. Os links são divididos nos links <i>externos</i>, ou seja, que te redirecionam para outras páginas ou os links <i> internos </i> que te redirecionam para páginas dentro do próprio site web. 
+</p>
+<h2> Incluindo Imagens </h2>
+<p> Imagens usam a tag &lt;img&gt;. Atributos principais: src (caminho) e alt (descrição).Podem ter legenda com &lt;figure&gt; e &lt;figcaption&gt;.
+<img src = "C:\Users\avill\Downloads\figu7.jpeg" alt = "Incluindo imagens" title = "Incluindo imagens" />
+</p>
+<h2> Dados em Tabelas </h2>
+<p>
+As tabelas são usadas para organizar dados em linhas e colunas.Elementos principais:<br>
+- &lt;table&gt;: tabela.<br>
+- &lt;tr&gt;: linha.<br>
+- &lt;td&gt;: célula.<br>
+- &lt;th&gt;: cabeçalho.<br>
+Para melhor organização, pode-se usar &lt;thead&gt;, &lt;tbody&gt; e &lt;tfoot&gt;.
+É possível mesclar células com colspan (colunas) e rowspan (linhas).
+
+</p>
+<h2>Formulários</h2>
+<p>
+Formulários permitem coletar dados dos usuários.
+O elemento principal é &lt;form&gt;, que possui: 
+<br>- action: para onde os dados são enviados.<br>
+- method: forma de envio (GET ou POST).<br>
+Campos comuns:<br>
+- &lt;input&gt; (texto, senha, email, etc.)<br>
+- &lt;textarea&gt; (textos longos)<br>
+- &lt;select&gt; e &lt;option&gt; (listas)<br>
+- radio (uma opção) e checkbox (várias opções)<br>
+- submit (botão de envio)<br>
+Os dados são enviados como pares nome=valor.
+</p>
+
+</body>
+</html>
