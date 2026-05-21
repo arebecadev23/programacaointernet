@@ -1,0 +1,30 @@
+body {
+font-family: Trebuchet MS, sans-serif;
+background-color: rgb(0, 0, 0);
+}
+h2 {
+color:rgb(102, 0, 128);
+}
+.botao {
+     color: white;
+    background-color: hwb(244 8% 45%);
+}
+img {
+    border-radius: 15px; /* Deixa os cantos suavemente arredondados */
+}
+a:link {
+    color: rgb(255, 255, 255);
+    text-decoration: underline; /* Adiciona o sublinhado [cite: 476] */
+}
+
+/* Links já visitados anteriormente */
+a:visited {
+    color: rgb(210, 180, 220);
+}
+
+/* Quando o usuário passa o mouse por cima do link */
+a:hover {
+    color: black;
+    background-color: orange; /* Dá um efeito de destaque [cite: 512] */
+    text-decoration: none;    /* Remove o sublinhado se quiser */
+}

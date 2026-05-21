@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+
+    <title>Capítulo III</title>
+</head>
+<body>
+
+    <p><b>Menu de Navegação do Resumo (Links Internos):</b></p>
+    <ul>
+        <li><a href="#css_introducao">1. Introdução e o Princípio do CSS</a></li>
+        <li><a href="#css_inclusao">2. Métodos de Incluindo CSS no HTML</a></li>
+        <li><a href="#css_seletores">3. Tipos de Seletores</a></li>
+        <li><a href="#css_cascata">4. Cascating, Especificidade e Herança</a></li>
+        <li><a href="#css_cores">5. Aplicando Cores no CSS</a></li>
+        <li><a href="#css_texto">6. Formatação de Texto e Tipografia</a></li>
+        <li><a href="#css_listas">7. Projetando e Customizando Listas</a></li>
+        <li><a href="#css_tabelas">8. Projetando e Organizando Tabelas</a></li>
+        <li><a href="#css_posicionamento">9. Princípios Básicos de Posicionamento</a></li>
+        <li><a href="#css_layouts">10. Sistemas de Layout (Float, Flexbox e Grid)</a></li>
+        <li><a href="#css_praticas">11. Ferramentas de Desenvolvedor e Design Responsivo</a></li>
+        <li><a href="#componentes_formulario">12. Demonstração de Componentes Básicos e Links</a></li>
+    </ul>
+
+    <hr>
+
+    <h2>1. Introdução e o Princípio do CSS</h2>
+    <p>O CSS (Cascading Style Sheets) é uma das três linguagens mais importantes para o desenvolvimento frontend. Ele atua como uma linguagem de estilo criada especificamente para controlar a apresentação visual e a exibição de elementos escritos em HTML. Como o HTML padrão exibe uma estrutura visualmente simplificada e dull (sem graça), o CSS surge para tornar os sites atraentes, amigáveis e apelativos ao usuário.</p>
+    <p>O funcionamento da linguagem é baseado em regras estruturadas em duas partes fundamentais:</p>
+    <ul>
+        <li><b>Seletor:</b> Mecanismo que identifica qual elemento ou grupo de elementos do HTML será alvo da regra de estilo.</li>
+        <li><b>Declaração:</b> Inserida obrigatoriamente entre chaves {}, ela define as propriedades estéticas do elemento. Cada declaração é formada por uma <i>propriedade</i> (o aspecto a ser mudado) e um <i>valor</i> (a nova diretiva configurada), separados por dois pontos (:) e finalizados por ponto e vírgula (;).</li>
+    </ul>
+
+
+    <h2>2. Métodos de Incluindo CSS no HTML</h2>
+    <p>O material descreve três maneiras principais de implementar e aplicar as folhas de estilo em um documento HTML:</p>
+    <ul>
+        <li><b>External Stylesheets (CSS Externo):</b> As regras de estilo são gravadas em um arquivo independente com a extensão <code>.css</code>. Esse arquivo é vinculado ao HTML no cabeçalho por meio da tag <code>&lt;link&gt;</code>. É o método mais eficiente pois isola a estrutura do design, simplifica modificações globais e permite que o mesmo arquivo de estilo seja reutilizado por múltiplos documentos web.</li>
+        <li><b>Internal Stylesheets (CSS Interno):</b> As diretivas de estilo são declaradas diretamente no cabeçalho do documento HTML, inseridas no espaço interno do elemento <code>&lt;style&gt;</code>. Limita a reusabilidade do código para outras páginas do site.</li>
+        <li><b>Inline Styles (CSS Inline):</b> Os estilos são aplicados diretamente no elemento HTML-alvo utilizando o atributo <code>style</code> na tag de abertura. O código de apresentação mistura-se com a marcação estrutural, anulando completamente o reaproveitamento de código.</li>
+    </ul>
+    <p><i>Nota do Capítulo: Existe uma quarta opção chamada regra <code>@import</code>. Ela é usada dentro de arquivos CSS ou blocos internos para carregar arquivos CSS adicionais, viabilizando um kit de construção modular.</i></p>
+
+    <hr>
+
+    <h2>3. Tipos de Seletores</h2>
+    <p>Os seletores oferecem flexibilidade e controle preciso sobre o documento. Os tipos descritos no texto são:</p>
+    <ul>
+        <li><b>Type Selector (Seletor de Tipo):</b> Seleciona elementos diretamente pelo nome de sua tag HTML (como <code>h1</code>, <code>p</code> ou <code>input</code>).</li>
+        <li><b>Class Selector (Seletor de Classe):</b> Mapeia elementos que utilizam o atributo global class. No código CSS, é indicado por um ponto final que precede o nome da classe (ex: <code>.valid</code>).</li>
+        <li><b>ID Selector (Seletor de ID):</b> Direciona a regra para o único elemento que possui o identificador correspondente. No CSS, usa-se o caractere hash ou cerquilha (#) antes do termo (ex: <code>#start</code>). IDs devem ser exclusivos no documento.</li>
+        <li><b>Universal Selector (Seletor Universal):</b> Indicado pelo caractere asterisco (<code>*</code>), seleciona e aplica as propriedades a todos os elementos existentes na página simultaneamente.</li>
+        <li><b>Attribute Selector (Seletor de Atributo):</b> Localiza elementos com base em seus atributos e valores entre colchetes, como <code>[type="text"]</code>. Há variações para buscas parciais: começa com (<code>^=</code>), termina com (<code>$=</code>) e contém (<code>*=</code>).</li>
+        <li><b>Seletores Hierárquicos e de Relacionamento:</b> Filtram os elementos analisando a árvore do HTML. Incluem o seletor de irmão adjacente (<code>+</code>), irmão geral (<code>~</code>), filho direto (<code>&gt;</code>) e descendente geral (indicado por um espaço em branco entre as tags).</li>
+    </ul>
+
+
+    <h2>4. Cascating, Especificidade e Herança</h2>
+    <p>Quando múltiplas regras entram em conflito ao mirar no mesmo elemento HTML, o navegador resolve o impasse por meio de regras de prioridade:</p>
+    <ul>
+        <li>Se os seletores aplicados forem idênticos, ocorre o cascateamento por ordem física: a <u>última regra escrita no código substitui as anteriores</u> e toma a precedência.</li>
+        <li>Se os seletores forem diferentes, o navegador calcula o nível de <b>especificidade</b> baseado em três contadores: A (quantidade de IDs), B (quantidade de classes e atributos) e C (quantidade de tags de tipo). Seletores com maior pontuação anulam os mais genéricos. Estilos declarados diretamente no atributo inline superam as folhas de estilo externas ou internas.</li>
+    </ul>
+    <p><b>Herança:</b> Elementos filhos inseridos dentro de outros elementos herdam de forma automática as propriedades de texto e cores de seus ancestrais (como as propriedades <code>color</code> e <code>font-family</code>). Propriedades de estrutura física, como a propriedade de borda (<code>border</code>), não são herdadas automaticamente.</p>
+
+
+    <h2>5. Aplicando Cores no CSS</h2>
+    <p>O CSS gerencia cores tanto para o primeiro plano (propriedade <code>color</code>) quanto para o fundo de caixas e seções (propriedade <code>background-color</code>). Os formatos aceitos de inserção são:</p>
+    <ul>
+        <li><b>Nomes de Cores:</b> Palavras-chave textuais literais para mais de 140 cores predefinidas no padrão (como <code>darkblue</code> ou <code>hotpink</code>).</li>
+        <li><b>Valores Hexadecimais:</b> Códigos alfanuméricos de 6 dígitos precedidos pelo caractere #, representando os canais Vermelho, Verde e Azul (ex: <code>#FFFF00</code> para amarelo).</li>
+        <li><b>Valores RGB:</b> Notação baseada na intensidade de vermelho, verde e azul informada por inteiros na escala de 0 a 255.</li>
+        <li><b>Valores RGBA:</b> Uma extensão do RGB que introduz um quarto parâmetro correspondente ao canal alfa, que varia de 0.0 (transparência total) a 1.0 (opacidade completa).</li>
+        <li><b>HSL e HSLA:</b> Sistema baseado nos parâmetros de Matiz (Hue, um ângulo de 0° a 360°), Saturação (porcentagem) e Luminosidade (porcentagem). A variação HSLA também engloba o controle de opacidade alfa.</li>
+    </ul>
+
+
+    <h2>6. Formatação de Texto e Tipografia</h2>
+    <p>O controle tipográfico e estético do texto é feito através de um grupo de propriedades dedicadas:</p>
+    <ul>
+        <li><b>font-family:</b> Determina a fonte do texto. É obrigatório indicar opções de reserva (fallbacks) separadas por vírgula, finalizando a declaração com famílias genéricas como <code>serif</code>, <code>sans-serif</code> ou <code>monospace</code>. Nomes de fontes que contêm espaços vazios devem ser escritos entre aspas.</li>
+        <li><b>font-size:</b> Ajusta a escala e tamanho do texto, recebendo unidades absolutas em pixels (<code>px</code>) ou unidades relativas como porcentagens e a unidade <code>em</code> (baseada na largura da letra "m").</li>
+        <li><b>font-style e font-weight:</b> Configuram, respectivamente, a inclinação visual do texto (como o valor <code>italic</code>) e o peso da fonte em negrito (normal, bold, ou escalas numéricas que variam de 100 a 900).</li>
+        <li><b>Propriedades de Alinhamento e Efeito:</b> Incluem o <code>text-transform</code> (conversão para uppercase, lowercase ou capitalize), <code>text-decoration</code> (aplicação de estilos como underline, line-through ou overline), <code>text-align</code> (alinhamento em left, right, center ou justify), além de controles para espaçamento como <code>line-height</code> (altura da linha), <code>letter-spacing</code>, <code>word-spacing</code>, <code>vertical-align</code> e <code>text-shadow</code> (sombra projetada no texto).</li>
+    </ul>
+
+
+    <h2>7. Projetando e Customizando Listas</h2>
+    <p>Listas estruturadas recebem parametrização visual por meio de propriedades que alteram seus marcadores originais:</p>
+    <ul>
+        <li><b>list-style-type:</b> Altera os símbolos de marcação. Em listas não ordenadas (ul), aceita parâmetros como <code>none</code>, <code>disc</code>, <code>circle</code> e <code>square</code>. Em listas ordenadas (ol), aceita formatos como <code>decimal</code>, <code>decimal-leading-zero</code>, <code>lower-alpha</code>, <code>upper-alpha</code>, <code>lower-roman</code> e <code>upper-roman</code>.</li>
+        <li><b>list-style-image:</b> Permite substituir os marcadores padrão por um arquivo gráfico customizado passando o caminho através de uma URL.</li>
+        <li><b>list-style-position:</b> Ajusta o recuo e alinhamento do marcador em relação ao texto da lista, utilizando os valores <code>outside</code> (marcador fora do bloco de texto) ou <code>inside</code> (marcador embutido no fluxo da primeira linha).</li>
+    </ul>
+
+
+    <h2>8. Projetando e Organizando Tabelas</h2>
+    <p>Para customizar e organizar os dados em tabelas do HTML, o CSS disponibiliza propriedades estruturais específicas:</p>
+    <ul>
+        <li><code>border</code>: Uma propriedade compacta (shorthand) que permite unificar a largura (border-width), o estilo (border-style, como solid ou dashed) e a cor da borda (border-color) em uma única linha de código.</li>
+        <li><code>border-collapse</code>: Utiliza a configuração <code>collapse</code> para forçar que as células vizinhas compartilhem a mesma linha divisória, removendo as bordas duplas nativas do HTML.</li>
+        <li><code>padding</code>: Determina o espaçamento interno, afastando o conteúdo textual das linhas de borda da célula da tabela.</li>
+        <li><b>Uso de Pseudo-classes:</b> O texto destaca o uso de seletores dinâmicos como <code>:first-child</code> para alvejar elementos iniciais (como a primeira coluna) e <code>:nth-child()</code> recebendo parâmetros matemáticos ou termos como <code>odd</code> (linhas ímpares) e <code>even</code> (linhas pares) para gerar o efeito visual de linhas alternadas.</li>
+    </ul>
+
+
+    <h2>9. Princípios Básicos de Posicionamento</h2>
+    <p>O CSS interage com a árvore estrutural reconhecendo a divisão dos elementos entre <b>Block-Level</b> (elementos de bloco que iniciam em uma nova linha e se organizam verticalmente) e <b>Inline-Level</b> (elementos de linha que acompanham o fluxo horizontal do texto). A propriedade <code>display</code> altera esses estados usando os comandos <code>block</code> ou <code>inline</code>.</p>
+    <p>A ordenação das caixas na página é controlada e modificada pela propriedade <code>position</code>, que oferece cinco comportamentos principais:</p>
+    <ul>
+        <li><code>static</code>: É o modo padrão do navegador; os elementos seguem a ordem natural do fluxo do HTML.</li>
+        <li><code>relative</code>: Permite deslocar o elemento em relação à posição original que ele ocuparia normalmente no fluxo da página através de eixos (top, left, etc.).</li>
+        <li><code>absolute</code>: Tira o elemento do fluxo convencional da página, fixando sua posição em relação ao seu elemento pai mais próximo que possua posicionamento modificado.</li>
+        <li><code>fixed</code>: Remove o elemento do fluxo e fixa-o em coordenadas rígidas tendo como referência direta a janela do navegador (viewport). O item não se desloca durante a rolagem.</li>
+        <li><code>sticky</code>: Funciona de modo híbrido; o elemento se comporta como relativo até que a rolagem atinja um limite configurado na tela, fixando-se a partir daquele ponto.</li>
+    </ul>
+
+
+    <h2>10. Sistemas de Layout (Float, Flexbox e Grid)</h2>
+    <p>A estruturação de páginas evoluiu através de diferentes mecanismos de diagramação detalhados no capítulo:</p>
+    <ul>
+        <li><b>Float Layout:</b> Desloca elementos para as margens esquerda ou direita através da propriedade <code>float</code>, permitindo que textos fluam ao redor deles. Em estruturas como formulários inline, necessita da inserção da propriedade <code>overflow: hidden</code> no elemento contêiner pai para forçar o ajuste de sua altura física e evitar o colapso do layout.</li>
+        <li><b>Flexbox Layout (Unidimensional):</b> Sistema voltado para o alinhamento e distribuição flexível de subelementos em apenas uma dimensão (seja uma linha horizontal ou uma coluna vertical). É ativado declarando <code>display: flex</code> no elemento pai (flex container). Utiliza as propriedades <code>justify-content</code> (com valores como flex-start, flex-end, center, space-between, space-around, space-evenly) e <code>align-items</code> para gerenciar o alinhamento nos eixos, além de propriedades como <code>flex-grow</code> ou o atalho <code>flex</code> para gerenciar a elasticidade e crescimento dos itens filhos.</li>
+        <li><b>Grid Layout (Bidimensional):</b> O modelo mais robusto, capaz de organizar elementos em uma malha ortogonal estruturada em linhas e colunas simultaneamente. É inicializado aplicando <code>display: grid</code> no elemento pai. As linhas e colunas são criadas com as diretivas <code>grid-template-rows</code> e <code>grid-template-columns</code>. Suporta o uso da unidade de fração <code>fr</code> para divisão proporcional do espaço (ex: <code>1fr 2fr</code>) e permite que elementos filhos preencham espaços específicos na malha por meio da propriedade <code>grid-column</code> (ex: <code>1 / 2</code>).</li>
+    </ul>
+
+
+    <h2>11. Ferramentas de Desenvolvedor e Design Responsivo</a></h2>
+    <p>A depuração de conflitos gerados por herança, especificidade e a análise das dimensões físicas das caixas (Box Model: margens, bordas, preenchimentos e conteúdo) é feita através das ferramentas de desenvolvedor do navegador, como o Chrome DevTools. Na seção <i>Elements</i>, a aba <i>Styles</i> lista as regras de estilo ativas e desabilitadas, enquanto a aba <i>Computed</i> consolida os valores finais calculados para o elemento.</p>
+    <p>O conceito de <b>Responsive Design</b> (Design Responsivo) representa a capacidade de uma interface web reorganizar e adaptar seu layout a diferentes resoluções e tamanhos de telas (como monitores, tablets e smartphones). Essa técnica funciona com o uso de <i>Media Queries</i>, que são instruções capazes de ativar, modificar ou anular blocos de regras CSS baseando-se em condições físicas como a largura atual da tela do dispositivo.</p>
+
+
+    <h2>12. Demonstração de Componentes Básicos e Link</h2>
+    
+    <p><b>Campos de Entrada de Texto (Estrutura de formulário básico mencionada no texto):</b></p>
+    <form >
+        <p>First name (Campo de entrada de texto de linha única): <input type="text" id="firstName" name="primeiro_nome"></p>
+        <p>Birth date (Campo de seleção de data citado no código de exemplo): <input type="date" id="birthday" name="data_nascimento"></p>
+        <p>E-mail de contato (Entrada de texto padrão): <input type="text" id="email" name="email_usuario"></p>
+        <p></p>
+    </form>
+
+    <p><b>Exemplos de Links Externos e Internos (Parametrização via Atributos):</b></p>
+    <ul>
+        <li><b>Link Externo (Redirecionamento para fora do site):</b> Para acessar a lista oficial de palavras-chave aceitas para cores, consulte a página da <a href="https://www.w3.org/wiki/CSS/Properties/color/keywords" target="_blank">W3C Wiki de Cores do CSS</a>.</li>
+        <li><b>Link Externo (Frameworks Utilitários citados no texto):</b> Você também pode consultar as folhas de estilo pré-construídas visitando o site do <a href="https://getbootstrap.com" target="_blank">Bootstrap</a>, o site do <a href="https://semantic-ui.com" target="_blank">Semantic UI</a> ou o site do <a href="https://materializecss.com" target="_blank">Materialize CSS</a>.</li>
+        <li><b>Link Interno (Navegação dentro do próprio documento):</b> Você pode retornar para o índice de conteúdos clicando em <a href="#css_introducao">Voltar para o topo (1. Introdução e o Princípio do CSS)</a>.</li>
+    </ul>
+
+</body>
+</html>
