@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Capítulo IV - JavaScript</title>
+</head>
+<body>
+
+    <p><b>Menu de Navegação do Resumo (Links Internos):</b></p>
+
+    <ul>
+        <li><a href="#js_introducao">1. Introdução ao JavaScript</a></li>
+        <li><a href="#js_inclusao">2. Formas de Incluir JavaScript</a></li>
+        <li><a href="#js_dialogos">3. Caixas de Diálogo e Console</a></li>
+        <li><a href="#js_programacao">4. Conceitos Fundamentais de Programação</a></li>
+        <li><a href="#js_variaveis">5. Variáveis, Constantes e Tipos de Dados</a></li>
+        <li><a href="#js_operadores">6. Operadores em JavaScript</a></li>
+        <li><a href="#js_estruturas">7. Estruturas de Controle</a></li>
+        <li><a href="#js_funcoes">8. Funções e Retornos</a></li>
+        <li><a href="#js_erros">9. Tratamento de Erros</a></li>
+        <li><a href="#js_objetos">10. Objetos e Arrays</a></li>
+        <li><a href="#js_resumo">11. Resumo Final do Capítulo</a></li>
+    </ul>
+
+    <hr>
+
+    <h2 id="js_introducao">1. Introdução ao JavaScript</h2>
+
+    <p>
+        O JavaScript é uma das principais linguagens utilizadas no desenvolvimento web moderno.
+        Sua principal função é adicionar dinamismo, interatividade e comportamento às páginas HTML.
+        Enquanto o HTML organiza o conteúdo e o CSS controla a aparência visual, o JavaScript permite
+        criar ações, animações, validações e respostas automáticas às interações do usuário.
+    </p>
+
+    <p>
+        A linguagem JavaScript segue o padrão ECMAScript, mantido pela organização ECMA International.
+        Esse padrão define as regras, funcionalidades e estruturas que os navegadores devem seguir
+        para interpretar corretamente os códigos escritos em JavaScript.
+    </p>
+
+    <hr>
+
+    <h2 id="js_inclusao">2. Formas de Incluir JavaScript</h2>
+
+    <p>
+        O JavaScript pode ser incorporado em páginas HTML de diferentes maneiras:
+    </p>
+
+    <ul>
+        <li>
+            <b>Arquivo Externo:</b> O código JavaScript é salvo em arquivos com extensão
+            <code>.js</code> e conectado ao HTML através da tag
+            <code>&lt;script src=""&gt;</code>. Essa abordagem é a mais recomendada,
+            pois mantém o projeto organizado e facilita a reutilização do código.
+        </li>
+
+        <li>
+            <b>Script Interno:</b> O código é escrito diretamente dentro da tag
+            <code>&lt;script&gt;</code> no próprio documento HTML.
+        </li>
+
+        <li>
+            <b>Script Inline:</b> Pequenos comandos JavaScript podem ser escritos diretamente
+            dentro de atributos HTML, embora isso não seja considerado uma boa prática.
+        </li>
+    </ul>
+
+    <p>
+        Também existe o elemento <code>&lt;noscript&gt;</code>, utilizado para exibir mensagens
+        caso o navegador do usuário não suporte JavaScript ou esteja com ele desativado.
+    </p>
+
+    <hr>
+
+    <h2 id="js_dialogos">3. Caixas de Diálogo e Console</h2>
+
+    <p>
+        O JavaScript oferece funções prontas para interação rápida com o usuário:
+    </p>
+
+    <ul>
+        <li>
+            <code>alert()</code> — exibe uma caixa de aviso simples.
+        </li>
+
+        <li>
+            <code>confirm()</code> — mostra uma caixa de confirmação com opções de aceitar ou cancelar.
+        </li>
+
+        <li>
+            <code>prompt()</code> — permite que o usuário digite informações em uma caixa de entrada.
+        </li>
+    </ul>
+
+    <p>
+        Além das caixas de diálogo, os navegadores disponibilizam o Console do Desenvolvedor,
+        usado para testes, depuração e exibição de mensagens durante o desenvolvimento.
+    </p>
+
+    <ul>
+        <li><code>console.log()</code> — exibe mensagens comuns.</li>
+        <li><code>console.error()</code> — exibe mensagens de erro.</li>
+        <li><code>console.warn()</code> — exibe avisos.</li>
+        <li><code>console.info()</code> — mostra informações.</li>
+        <li><code>console.debug()</code> — usado para depuração.</li>
+    </ul>
+
+    <hr>
+
+    <h2 id="js_programacao">4. Conceitos Fundamentais de Programação</h2>
+
+    <p>
+        Programar significa criar instruções para que o computador execute tarefas específicas.
+        Essas instruções são organizadas em algoritmos, que representam sequências lógicas de ações.
+    </p>
+
+    <p>
+        Os computadores trabalham internamente utilizando código binário, composto por zeros e uns.
+        As linguagens de programação funcionam como uma camada de abstração que facilita a comunicação
+        entre humanos e máquinas.
+    </p>
+
+    <p>
+        O JavaScript é considerado uma linguagem de alto nível, pois oferece comandos mais próximos
+        da linguagem humana e abstrai os detalhes do funcionamento interno do computador.
+    </p>
+
+    <hr>
+
+    <h2 id="js_variaveis">5. Variáveis, Constantes e Tipos de Dados</h2>
+
+    <p>
+        Variáveis são espaços utilizados para armazenar informações durante a execução do programa.
+        Em JavaScript, elas podem ser declaradas usando o comando <code>let</code>.
+    </p>
+
+    <ul>
+        <li>
+            <b>Variáveis:</b> podem ter seus valores alterados durante o programa.
+        </li>
+
+        <li>
+            <b>Constantes:</b> são declaradas com <code>const</code> e não podem ter
+            seus valores modificados após a atribuição inicial.
+        </li>
+    </ul>
+
+    <p>
+        O JavaScript trabalha com diferentes tipos de dados:
+    </p>
+
+    <ul>
+        <li><b>Number:</b> representa números inteiros e decimais.</li>
+        <li><b>String:</b> representa textos e cadeias de caracteres.</li>
+        <li><b>Boolean:</b> representa valores lógicos <code>true</code> e <code>false</code>.</li>
+        <li><b>Null:</b> representa ausência intencional de valor.</li>
+        <li><b>Undefined:</b> representa variáveis sem valor definido.</li>
+        <li><b>Object:</b> estrutura utilizada para agrupar informações.</li>
+    </ul>
+
+    <hr>
+
+    <h2 id="js_operadores">6. Operadores em JavaScript</h2>
+
+    <p>
+        Operadores permitem realizar cálculos, comparações e manipulações de dados.
+    </p>
+
+    <ul>
+        <li>
+            <b>Operadores Aritméticos:</b>
+            <code>+</code>,
+            <code>-</code>,
+            <code>*</code>,
+            <code>/</code>,
+            <code>%</code>.
+        </li>
+
+        <li>
+            <b>Operadores de Comparação:</b>
+            <code>==</code>,
+            <code>===</code>,
+            <code>!=</code>,
+            <code>&gt;</code>,
+            <code>&lt;</code>.
+        </li>
+
+        <li>
+            <b>Operadores Lógicos:</b>
+            <code>&&</code>,
+            <code>||</code>,
+            <code>!</code>.
+        </li>
+
+        <li>
+            <b>Operador de Concatenação:</b>
+            utilizado para unir textos através do símbolo <code>+</code>.
+        </li>
+    </ul>
+
+    <hr>
+
+    <h2 id="js_estruturas">7. Estruturas de Controle</h2>
+
+    <p>
+        Estruturas de controle permitem definir decisões e repetições dentro de um programa.
+    </p>
+
+    <ul>
+        <li>
+            <b>If e Else:</b> executam blocos diferentes dependendo de uma condição.
+        </li>
+
+        <li>
+            <b>Else If:</b> permite testar múltiplas condições.
+        </li>
+
+        <li>
+            <b>Switch:</b> seleciona diferentes caminhos com base no valor de uma variável.
+        </li>
+    </ul>
+
+    <p>
+        O JavaScript também possui estruturas de repetição:
+    </p>
+
+    <ul>
+        <li>
+            <b>For:</b> usado quando se conhece a quantidade de repetições.
+        </li>
+
+        <li>
+            <b>While:</b> executa enquanto a condição for verdadeira.
+        </li>
+
+        <li>
+            <b>Do While:</b> executa pelo menos uma vez antes de verificar a condição.
+        </li>
+    </ul>
+
+    <hr>
+
+    <h2 id="js_funcoes">8. Funções e Retornos</h2>
+
+    <p>
+        Funções são blocos reutilizáveis de código criados para executar tarefas específicas.
+    </p>
+
+    <p>
+        Elas podem receber parâmetros, processar informações e retornar resultados.
+    </p>
+
+    <ul>
+        <li>
+            <b>Function Declaration:</b> função criada utilizando a palavra-chave
+            <code>function</code>.
+        </li>
+
+        <li>
+            <b>Function Expression:</b> função armazenada em uma variável.
+        </li>
+
+        <li>
+            <b>Arrow Function:</b> sintaxe reduzida utilizando o símbolo <code>=&gt;</code>.
+        </li>
+    </ul>
+
+    <p>
+        O comando <code>return</code> é utilizado para devolver valores gerados pela função.
+    </p>
+
+    <hr>
+
+    <h2 id="js_erros">9. Tratamento de Erros</h2>
+
+    <p>
+        Durante a execução de programas podem ocorrer diferentes tipos de erros:
+    </p>
+
+    <ul>
+        <li>
+            <b>Erros de Sintaxe:</b> acontecem quando o código viola regras da linguagem.
+        </li>
+
+        <li>
+            <b>Erros de Execução:</b> surgem durante o funcionamento do programa.
+        </li>
+
+        <li>
+            <b>Erros Lógicos:</b> ocorrem quando o programa executa incorretamente devido
+            à lógica inadequada.
+        </li>
+    </ul>
+
+    <p>
+        O JavaScript utiliza estruturas <code>try</code> e <code>catch</code>
+        para capturar e tratar erros de execução.
+    </p>
+
+    <hr>
+
+    <h2 id="js_objetos">10. Objetos e Arrays</h2>
+
+    <p>
+        Objetos permitem organizar dados relacionados em uma única estrutura.
+    </p>
+
+    <ul>
+        <li>
+            <b>Propriedades:</b> armazenam características do objeto.
+        </li>
+
+        <li>
+            <b>Métodos:</b> funções internas do objeto.
+        </li>
+    </ul>
+
+    <p>
+        Arrays funcionam como listas que armazenam múltiplos valores em sequência.
+    </p>
+
+    <ul>
+        <li>
+            Os elementos são acessados por índices iniciados em <code>0</code>.
+        </li>
+
+        <li>
+            Métodos como <code>push()</code>, <code>pop()</code>,
+            <code>sort()</code> e <code>filter()</code> facilitam
+            a manipulação dos dados.
+        </li>
+    </ul>
+
+    <hr>
+
+    <h2 id="js_resumo">11. Resumo Final do Capítulo</h2>
+
+    <p>
+        O JavaScript é responsável pela interatividade e comportamento das páginas web.
+        A linguagem oferece recursos para armazenamento de dados, cálculos, controle de fluxo,
+        reutilização de código e manipulação de informações.
+    </p>
+
+    <p>
+        Entre os principais conceitos estudados estão:
+    </p>
+
+    <ul>
+        <li>Inclusão de scripts em páginas HTML;</li>
+        <li>Uso de variáveis e constantes;</li>
+        <li>Tipos de dados e operadores;</li>
+        <li>Estruturas condicionais e de repetição;</li>
+        <li>Funções e retorno de valores;</li>
+        <li>Tratamento de erros;</li>
+        <li>Objetos e arrays.</li>
+    </ul>
+
+    <p>
+        Esses conceitos formam a base do desenvolvimento utilizando JavaScript e são
+        fundamentais para a criação de aplicações web dinâmicas e interativas.
+    </p>
+
+</body>
+</html>
